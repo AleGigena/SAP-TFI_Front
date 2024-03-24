@@ -76,7 +76,7 @@
     </div>
     <div class="col-2">
       <h1 class="display-1 text-primary fw-bold text-center glow">
-        <ng-container *ngIf="qtyUsers$ | async as clientes">{{ clientes.count }}</ng-container>
+        <ng-container *ngIf="qtyUsers$ | async as usuarios">{{ users.count }}</ng-container>
       </h1>
     </div>
   </div>
@@ -84,10 +84,10 @@
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-evenly">
     <div class="col-2">
       <h1
-        *ngIf="qtyNotes$ | async as contactos"
+        *ngIf="qtyNotes$ | async as notes"
         class="display-1 text-primary fw-bold text-center glow"
       >
-        {{ contactos.count }}
+        {{ notes.count }}
       </h1>
     </div>
     <div class="col text-dark">

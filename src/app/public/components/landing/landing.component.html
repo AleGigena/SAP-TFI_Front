@@ -1,63 +1,100 @@
 <app-navbar></app-navbar>
-<div
-  class="container my-5 d-flex flex-column align-items-center justify-content-center gap-3 mt-5 shadow-lg p-5 bg-light rounded-3 pb-0 col-lg-7"
->
+
+<div class="container my-5 d-flex flex-column align-items-center justify-content-center gap-3 mt-5 shadow-lg p-5 bg-light rounded-3 pb-0 col-lg-7">
   <h1 class="d-flex flex-column text-capitalize fw-bold display-4 text-dark">
-    <span>Tus notas.</span>
-    <span class="text-bg-primary p-2 rounded-3">En un solo lugar.</span>
+    <span>Detecta y Protege.</span>
+    <span class="text-bg-primary p-2 rounded-3">Soluciones Avanzadas de Detección de Dióxido de Carbono.</span>
   </h1>
   <p class="lead text-body">
-    App simple para guardar tus notas, pensamientos e ideas en un solo lugar.
+    En un mundo donde la calidad del aire es crucial para la salud y el bienestar, estamos aquí para ofrecerte soluciones innovadoras que te ayudarán a mantener un ambiente seguro y saludable en cualquier entorno.
   </p>
   <div class="overflow-hidden" style="max-height: 30vh">
     <div class="container px-5">
       <img
-        src="../../../../assets/captura-app.png"
+        src="assets/detector-co2.jpg"
         class="img-fluid border rounded-3 shadow-lg mb-4"
-        alt="Imagen representativa de aplicacion de notas."
-        width="700"
-        height="500"
+        alt="Imagen representativa del detector de dióxido de carbono."
         loading="lazy"
       />
     </div>
   </div>
 </div>
 
-<div
-  class="container my-5 d-flex flex-column align-items-center justify-content-center gap-3 mt-5 shadow-lg p-5 bg-light rounded-3 col-lg-7"
->
-  <div
-    class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-evenly text-end border-bottom border-1"
-  >
+<div class="container my-5 d-flex flex-column align-items-center justify-content-center gap-3 mt-5 shadow-lg p-5 bg-light rounded-3 col-lg-7">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-evenly text-end border-bottom border-1">
     <div class="col text-dark">
       <h1 class="display-5 fw-bold lh-1 mb-3 text-capitalize">
-        Usuarios registrados
+        Beneficios del Detector de CO2
+      </h1>
+      <ul class="list-unstyled">
+        <li>- Protege la salud y el bienestar al garantizar un ambiente seguro.</li>
+        <li>- Cumple con los estándares de seguridad y regulaciones ambientales.</li>
+        <li>- Identifica y aborda rápidamente los problemas de ventilación.</li>
+      </ul>
+    </div>
+    <div class="col-2">
+      <h1 class="display-1 text-primary fw-bold text-center glow">+</h1>
+    </div>
+  </div>
+
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-evenly">
+    <div class="col-2">
+      <h1 class="display-1 text-primary fw-bold text-center glow">?</h1>
+    </div>
+    <div class="col text-dark">
+      <h1 class="display-5 fw-bold lh-1 mb-3 text-capitalize">
+        ¿Por qué Elegirnos?
+      </h1>
+      <p>Ofrecemos tecnología avanzada de detección de CO2 para mantener un ambiente seguro y saludable en tu hogar, oficina o establecimiento.</p>
+    </div>
+  </div>
+
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-evenly">
+    <div class="col text-dark">
+      <h1 class="display-5 fw-bold lh-1 mb-3 text-capitalize">
+        Envío de Mensajes de WhatsApp
+      </h1>
+      <p class="lead">En caso de detectar niveles peligrosos de CO2, nuestro sistema enviará automáticamente mensajes de WhatsApp a tus contactos de emergencia registrados, para garantizar una respuesta rápida y efectiva ante situaciones críticas.</p>
+    </div>
+    <div class="col-2">
+      <img
+        src="assets/whatsapp-icon.png"
+        class="img-fluid border rounded-3 shadow-lg mb-4"
+        alt="Icono de WhatsApp."
+        loading="lazy"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="container my-5 d-flex flex-column align-items-center justify-content-center gap-3 mt-5 shadow-lg p-5 bg-light rounded-3 col-lg-7">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-evenly text-end border-bottom border-1">
+    <div class="col text-dark">
+      <h1 class="display-5 fw-bold lh-1 mb-3 text-capitalize">
+        Clientes Registrados
       </h1>
     </div>
     <div class="col-2">
       <h1 class="display-1 text-primary fw-bold text-center glow">
-        <ng-container *ngIf="qtyUsers$ | async as users">{{
-          users.count
-        }}</ng-container>
+        <ng-container *ngIf="qtyClientes$ | async as clientes">{{ clientes.count }}</ng-container>
       </h1>
     </div>
   </div>
 
-  <div
-    class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-evenly"
-  >
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-evenly">
     <div class="col-2">
       <h1
-        *ngIf="qtyNotes$ | async as notes"
+        *ngIf="qtyContactosEmergencia$ | async as contactos"
         class="display-1 text-primary fw-bold text-center glow"
       >
-        {{ notes.count }}
+        {{ contactos.count }}
       </h1>
     </div>
     <div class="col text-dark">
       <h1 class="display-5 fw-bold lh-1 mb-3 text-capitalize">
-        Notas almacenadas
+        Contactos de Emergencia Registrados
       </h1>
+      <p>Se enviarán mensajes de WhatsApp a los contactos de emergencia seleccionados en caso de detectar niveles peligrosos de CO2.</p>
     </div>
   </div>
 </div>

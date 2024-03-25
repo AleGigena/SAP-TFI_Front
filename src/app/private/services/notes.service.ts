@@ -12,7 +12,7 @@ import { TagsResponse } from '../models/responses';
   providedIn: 'root',
 })
 export class NotesService {
-  private url = 'https://mcga-back.onrender.com';
+  private url = 'https://sap-tfi-back.onrender.com';
   constructor(private _auth: AuthService, private _http: HttpClient) {}
 
   async getNotes(): Promise<Note[]> {

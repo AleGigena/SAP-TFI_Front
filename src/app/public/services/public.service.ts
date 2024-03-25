@@ -8,7 +8,7 @@ import { UserRegistration } from '../models/user';
   providedIn: 'root',
 })
 export class PublicService {
-  url: String = 'https://mcga-back.onrender.com';
+  url: String = 'https://sap-tfi-back.onrender.com';
 
   constructor(private _http: HttpClient) {}
 
